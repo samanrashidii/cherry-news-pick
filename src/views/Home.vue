@@ -1,15 +1,10 @@
 <template>
   <b-container
-    class="home p-4"
-    fluid
+    class="home p-5"
+    fluid="lg"
   >
-    <div
-      class="d-flex justify-content-center"
-    >
-      <Logo />
-      <Search />
-    </div>
-
+    <Logo />
+    <Search />
   </b-container>
 </template>
 
