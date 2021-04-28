@@ -1,5 +1,7 @@
 <template>
-  <div class="search">
+  <div
+    class="search"
+  >
 
   </div>
 </template>
