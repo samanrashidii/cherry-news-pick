@@ -5,6 +5,7 @@
   >
     <b-form-input
       v-model="text"
+      type="search"
       class="border-secondary"
       placeholder="Type here..."
     />
@@ -28,16 +29,16 @@ export default {
   },
   methods: {
     doSearch () {
-      console.log(this.text)
+      if (this.text.length > 0) {
+        this.$emit('do-search', this.text)
+      }
     }
   }
 }
 </script>
 
-<style
-  lang="scss"
-  scoped
->
+<style lang="scss" scoped>
+
 $searchWidth: 440px;
 
 .search{

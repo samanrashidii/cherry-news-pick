@@ -13,7 +13,7 @@
       Cherry <strong class="text-danger">News</strong> Pick
     </h1>
     <p>
-      Get latest news based on searched keyword from newsapi.org
+      Get latest news from searched keyword in the last 24 Hours
     </p>
   </div>
 </template>

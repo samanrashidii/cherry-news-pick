@@ -2,35 +2,36 @@
   <b-card>
     <!-- Image -->
     <b-link
-      href="https://www.google.com"
+      :href="news.url"
       target="_blank"
     >
       <b-card-img
-        src="https://placekitten.com/g/400/450"
-        alt="Image"
+        :src="news.urlToImage"
+        :alt="news.title"
         class="rounded-0"
       />
     </b-link>
     <!-- Title -->
-    <b-card-title>
+    <b-card-title
+      class="mt-1"
+    >
       <b-link
-        href="https://www.google.com"
+        :href="news.url"
         target="_blank"
         class="text-danger"
       >
-        Card title that wraps to a new line
+        {{ news.title | truncate(50) }}
       </b-link>
     </b-card-title>
     <!-- Brief -->
     <b-card-text>
-      This is a wider card with supporting text below as a natural lead-in to additional content.
-      This content is a little bit longer.
+      {{ news.description }}
     </b-card-text>
     <!-- Date -->
     <b-card-text
       class="small text-muted"
     >
-      Last updated 3 mins ago
+      {{ news.publishedAt | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}
     </b-card-text>
   </b-card>
 </template>
