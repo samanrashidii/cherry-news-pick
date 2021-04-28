@@ -1,5 +1,7 @@
 # Cherry News Pick
 
+Get latest news based on searched keyword from newsapi.org
+
 ## Project setup
 ```
 npm install
