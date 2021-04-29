@@ -1,7 +1,7 @@
 <template>
   <b-form
     @submit.prevent="doSearch()"
-    class="search d-flex p-2 my-2 mx-auto border border-dark rounded-lg"
+    class="search col-6 d-flex p-2 my-2 mx-auto border border-dark rounded-lg"
   >
     <b-form-input
       v-model="text"
@@ -36,13 +36,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-$searchWidth: 440px;
-
-.search{
-  max-width: $searchWidth;
-}
-
-</style>

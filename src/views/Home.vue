@@ -51,7 +51,7 @@ export default {
     return {
       isLoading: false,
       keyword: '',
-      pageSize: 9,
+      pageSize: 27,
       pageNumber: 1
     }
   },
@@ -60,26 +60,12 @@ export default {
       allNews: 'news/allNews'
     })
   },
-  mounted () {
-    // Detect when scrolled to bottom
-    window.addEventListener('scroll', this.handleScroll)
-  },
   methods: {
     ...mapActions({
       getAllNews: 'news/getAllNews'
     }),
-    handleScroll () {
-      const bodyEl = document.querySelector('html')
-      if (!this.isLoading && (Math.ceil(bodyEl.scrollTop) + bodyEl.clientHeight >= bodyEl.scrollHeight)) {
-        this.pageNumber = this.pageNumber + 1
-        this.searchNews()
-      }
-    },
     searchNews (data) {
-      if (data) {
-        this.keyword = data
-        this.pageNumber = 1
-      }
+      this.keyword = data
       // Required data before calling API
       const yesterday = new Date(new Date().getTime() - (24 * 60 * 60 * 1000))
       const query = {
@@ -88,7 +74,7 @@ export default {
         pageSize: this.pageSize,
         page: this.pageNumber,
         sortBy: 'popularity',
-        apiKey: 'dd73d7dfe5ce47c2af3b14640221fc72'
+        apiKey: '713aa40a3cb4450fa3040457c80967cc'
       }
       // Call API to get all News
       this.isLoading = true

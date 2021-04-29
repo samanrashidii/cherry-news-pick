@@ -31,7 +31,7 @@
     <b-card-text
       class="small text-muted"
     >
-      {{ news.publishedAt | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}
+      {{ news.publishedAt | moment('dddd, MMMM Do YYYY, h:mm:ss a') }}
     </b-card-text>
   </b-card>
 </template>
